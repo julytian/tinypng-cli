@@ -18,7 +18,12 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "dev": "tsx src/index.ts",
-    "build": "node ./scripts/build.mjs"
+    "build": "rimraf ./lib && node ./scripts/build.mjs",
+    "release": "pnpm build & release-it"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
@@ -59,5 +64,11 @@
     "*.{js,ts,vue,json}": [
       "prettier --write"
     ]
+  },
+  "release-it": {
+    "git": {
+      "tag": false,
+      "commitMessage": "release: @julytian/tinypng-cli ${version}"
+    }
   }
 }
