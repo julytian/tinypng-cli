@@ -1,0 +1,63 @@
+{
+  "name": "@julytian/tinypng-cli",
+  "version": "0.0.1",
+  "description": "An command line tool for tinypng.com",
+  "type": "module",
+  "main": "bin.js",
+  "bin": {
+    "tinypng": "./bin.js"
+  },
+  "files": [
+    "bin.js",
+    "lib"
+  ],
+  "engines": {
+    "node": "^14.16.0 || >=16.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "dev": "tsx src/index.ts",
+    "build": "node ./scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julytian/tinypng-cli.git"
+  },
+  "keywords": [
+    "tinypng",
+    "tinypng-cli",
+    "tinypng-cli-node"
+  ],
+  "author": "julytian <992113471@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julytian/tinypng-cli/issues"
+  },
+  "homepage": "https://github.com/julytian/tinypng-cli#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/minimatch": "^3.0.5",
+    "@types/node": "^18.6.5",
+    "cac": "^6.7.12",
+    "compressing": "^1.6.2",
+    "consola": "^2.15.3",
+    "esbuild": "^0.14.54",
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^10.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "minimatch": "^5.1.0",
+    "nanospinner": "^1.1.0",
+    "picocolors": "^1.0.0",
+    "prettier": "^2.7.1",
+    "release-it": "^15.3.0",
+    "rimraf": "^3.0.2",
+    "tsx": "^3.8.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "prettier --write"
+    ]
+  }
+}
