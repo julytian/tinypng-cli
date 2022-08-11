@@ -1,6 +1,13 @@
+
 # tinypng-cli
 
-An command line tool for tinypng.com
+An command line tool for tinypng.com <img src="https://img.shields.io/npm/v/@julytian/tinypng-cli?style=flat-square" alt="npm version" />
+
+## Install
+
+```bash
+npm i @julytian/tinypng-cli -g
+```
 
 ## Usage
 
