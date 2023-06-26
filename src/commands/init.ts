@@ -144,7 +144,7 @@ function fileUpload(target: string) {
   const options = {
     method: "POST",
     hostname: TINYPNG_DOMAIN[index],
-    path: "/web/shrink",
+    path: "/backend/opt/shrink",
     headers: {
       "Postman-Token": Date.now(),
       "Cache-Control": "no-cache",
