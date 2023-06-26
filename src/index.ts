@@ -1,4 +1,5 @@
 import cac from "cac";
+import { getVersion } from "./utils/index"
 
 const cli = cac("tinypng");
 cli
@@ -13,5 +14,6 @@ cli
     const { init } = await import("./commands/init");
     return init(imgs, options);
   });
+cli.version(getVersion());
 cli.help();
 cli.parse();
